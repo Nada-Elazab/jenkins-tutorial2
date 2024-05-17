@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Pull the repository
-                git url: env.REPO_URL
+                git branch: env.BRANCH, url: env.REPO_URL
             }
         }
         
