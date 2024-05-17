@@ -15,12 +15,14 @@ pipeline {
         }
         
         stage('Execute Script') {
-            steps {
-                // Ensure the script is executable
-                sh 'chmod +x running.sh'
-                
-                // Execute the script
-                sh './running.sh'
+           steps {
+                // Run the batch file
+                bat '''
+                @echo off
+                REM List files in the current directory
+                dir
+                call running.bat
+                '''
             }
         }
     }
