@@ -3,6 +3,7 @@ pipeline {
     
     environment {
         REPO_URL = 'https://github.com/Nada-Elazab/jenkins-tutorial2.git' // Replace with your repository URL
+        BRANCH = 'main'
     }
     
     stages {
